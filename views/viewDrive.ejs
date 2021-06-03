@@ -1,0 +1,88 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('includes/head.ejs') %>
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<%- include('includes/navigation.ejs') %>
+
+        <%- include('includes/sidebar.ejs') %>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="panel">
+                    <div class="panel-heading">
+                        
+                        <div class=" text-center">
+                            <h1 style="font-size:50px"><%= drive.name %></h1>
+                            <hr>
+                        </div>
+            
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div style=" border-radius: 10px; padding: 0.2cm 0.5cm 0.5cm 0.5cm;" class="jumbotron">
+                                    <div class="text-center"><h3>Description</h3></div>
+                                    <hr>
+                                    <div class=" text-center" style="border-radius: 10px; padding:0.5px 0.5px 0.5px 0.5px; background-color: rgb(252, 252, 252);">
+                                        <p style="padding: 0.2cm; font-size: 15px;"><%= drive.description %></p>
+                                    </div>
+                                    <hr>
+                                    <a href="<%= drive.website %>">
+                                        <span class="pull-center">Know more about <%= drive.name %></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div style=" border-radius: 10px; padding: 0.2cm 0.5cm 0.5cm 0.5cm;" class= "jumbotron">
+                                    <div class="text-center"><h3>Requirements</h3></div>
+                                    <hr>
+                                    <div class="alert" style="background-color: rgb(252, 252, 252);">
+                                        SSC: <%= drive.ssc %>
+                                    </div>
+                                    <div class="alert" style="background-color: rgb(252, 252, 252);">
+                                        HSC: <%= drive.hsc %>
+                                    </div>
+                                    <div class="alert" style="background-color: rgb(252, 252, 252);">
+                                        BE: <%= drive.be %>
+                                    </div>
+                                    <div class="alert" style="background-color: rgb(252, 252, 252);">
+                                        Current Backlogs: <%= drive.cb %>
+                                    </div>
+                                    <div class="alert" style="background-color: rgb(252, 252, 252);">
+                                        History of Backlogs: <%= drive.hob %>
+                                    </div>
+                                    <div class="alert" style="background-color: rgb(252, 252, 252);">
+                                        Years of study breaks: <%= drive.yosb %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <a href="/applyDrive/<%= drive.id %>" class="btn btn-primary ">Apply</a> -->
+                    <a href="/editDrive/<%= drive.id %>?edit=true" class="btn btn-primary ">Update</a>
+                    <a href="/deleteDrive/<%= drive.id %>" class="btn btn-primary ">Delete</a>
+                    <hr style="margin-bottom: 50px">
+                    
+                </div>
+            </div>
+        </div>
+        
+        <%- include('includes/scripts.ejs') %>
+
+    </body>
+    
+</html>
+
+
+
+
+
+
+

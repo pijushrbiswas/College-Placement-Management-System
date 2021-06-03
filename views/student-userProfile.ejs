@@ -1,0 +1,125 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('includes/head.ejs') %>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<%- include('includes/navigation.ejs') %>
+
+		<%- include('includes/student-sidebar.ejs') %>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">STUDENT PROFILE</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    USER DETAILS
+                </div>
+                <div class="panel-body">
+                    <!-- <form  role="form" action="/admin-userProfile" method="POST">
+                        <input type="hidden" value="<%=csrfToken %>" name="_csrf">
+                        
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" value="<%=user.name%>">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="email">E-Mail</label>
+                                    <input type="email" name="email" id="email" value="<%=user.email%>">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn" type="submit">Submit</button>
+                    </form> -->
+                    <form class="login-form" action="/student-userProfile" method="POST">
+                        <input type="hidden" value="<%=csrfToken %>" name="_csrf">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="name">Name: </label>
+                                </div>
+                                <div class="form-group">    
+                                    <input type="text" name="name" id="name" value="<%=user.name %>">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="email">E-Mail: </label>
+                                </div>
+                                <div class="form-group">    
+                                    <input type="email" name="email" id="email" value="<%=user.email %>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="department">Department: </label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="department" name="department" id="department" value="<%=user.department %>">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="be">BE Score: </label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="be" id="be" value="<%=user.be %>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="ssc">SSC Score: </label>
+                                </div>
+                                <div class="form-group"> 
+                                    <input type="ssc" name="ssc" id="ssc" value="<%=user.ssc %>">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="hsc">HSC Score: </label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="hsc" name="hsc" id="hsc" value="<%=user.hsc %>">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-primary" type="submit">Submit</button>
+                    </form>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+
+          
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <%- include('includes/scripts.ejs') %>
+
+</body>
+
+</html>

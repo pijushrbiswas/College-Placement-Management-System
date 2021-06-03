@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="/css/auth.css">
+        <link rel="stylesheet" href="/css/forms.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+	<div class="main">
+        <% if(errorMessage){ %>
+            <div class="user-message user-message--error"> <%= errorMessage %> </div>
+        <% } %> 
+		<div class="header" >
+			<h1>Student Signup</h1>
+		</div>
+		
+		<div>
+            <form class="login-form" action="/student-signup" method="POST">
+				<input type="hidden" value="<%=csrfToken %>" name="_csrf">
+				<div class="form-control">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name">
+				</div>
+				<div class="form-control">
+						<label for="email">E-Mail</label>
+						<input type="email" name="email" id="email">
+				</div>
+				<div class="form-control">
+						<label for="department">Department</label>
+						<input type="department" name="department" id="department">
+				</div>
+				<div class="form-control">
+						<label for="be">BE Score</label>
+						<input type="text" name="be" id="be">
+				</div>
+				<div class="form-control">
+						<label for="ssc">SSC Score</label>
+						<input type="ssc" name="ssc" id="ssc">
+				</div>
+				<div class="form-control">
+						<label for="hsc">HSC Score</label>
+						<input type="hsc" name="hsc" id="hsc">
+				</div>
+				<div class="form-control">
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password">
+				</div>
+				<div class="form-control">
+						<label for="confirmPassword">Confirm Password</label>
+						<input type="password" name="confirmPassword" id="confirmPassword">
+				</div>
+				<button class="btn" type="submit">Submit</button>
+		    </form>
+    
+
+		</div>
+
+    </div>
+
+</body>
+</html>

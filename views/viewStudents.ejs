@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('includes/head.ejs') %>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<%- include('includes/navigation.ejs') %>
+
+        <%- include('includes/sidebar.ejs') %>
+        
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Tables</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Students Details Table
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+
+                            <% if (students.length > 0) { %>
+                                <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Deparment</th>
+                                            <th>BE Score</th>
+                                            <th>SSC Score</th>
+                                            <th>HSC Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for (let student of students) { %>
+                                            <tr class="odd gradeX">
+                                                <td><%= student.name %></td>
+                                                <td><%= student.email %></td>
+                                                <td><%= student.department %></td>
+                                                <td><%= student.be %></td>
+                                                <td><%= student.ssc %></td>
+                                                <td><%= student.hsc %></td>
+                                            </tr>
+                                        <% } %>
+                                    </tbody>
+                                </table>
+
+                            <% } else { %>
+                                <h1>No Students Found!</h1>
+                            <% } %>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+
+    <%- include('includes/scripts.ejs') %>
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+    </script>    
+
+</body>
+
+</html>

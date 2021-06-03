@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('includes/head.ejs') %>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<%- include('includes/navigation.ejs') %>
+
+        <%- include('includes/student-sidebar.ejs') %>
+        
+        <div id="page-wrapper">
+            
+                <!-- /.col-lg-12 -->
+          
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Company Details Table
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+
+                            <% if (drives.length > 0) { %>
+                                <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>Company</th>
+                                            <th>Batch</th>
+                                            <th>Website</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for (let drive of drives) { %>
+                                            <tr class="odd gradeX">
+                                                <td><%= drive.driveId.name %></td>
+                                                <td><%= drive.driveId.batch %></td>
+                                                <td><%= drive.driveId.website %></td>
+                                                <td><%= drive.driveId.date %></td>
+                                                <td><a class="btn-primary" href="/deleteAppliedDrive/<%= drive.driveId.id %>">Delete</a></td>
+                                            </tr>
+                                        <% } %>
+                                    </tbody>
+                                </table>
+
+                            <% } else { %>
+                                <h1>No Drives Found!</h1>
+                            <% } %>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+
+    <%- include('includes/scripts.ejs') %>
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+    </script>    
+
+</body>
+
+</html>

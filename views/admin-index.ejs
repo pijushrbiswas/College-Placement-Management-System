@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('includes/head.ejs') %>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<%- include('includes/navigation.ejs') %>
+
+		<%- include('includes/sidebar.ejs') %>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Admin Dashboard</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-comments fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">26</div>
+                                    <div>ADD DRIVES!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/addDrives">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tasks fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">12</div>
+                                    <div>VIEW DRIVES!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="viewDrives">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">124</div>
+                                    <div>VIEW STUDENTS!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/viewStudents">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-8">
+                    
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-clock-o fa-fw"></i> Our Vision and Mission
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <ul class="timeline">
+                                <li>
+                                    <div class="timeline-badge"><i class="fa fa-check"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">About TCET</h4>
+                                            <hr>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>
+                                                "Thakur College of Engineering & Technology (TCET) was established in the Academic 
+                                                year 2001-02 with a clear objective of providing quality technical education in
+                                                tune with international standards and contemporary global requirements. The 
+                                                Institute is recognized by All India Council for Technical Education 
+                                                (AICTE) & Government of Maharashtra and is affiliated to the University of Mumbai
+                                                (UOM). It offers six Undergraduate, three Postgraduate and a Doctoral
+                                                - Ph.D.(Technology) programme. TCET is an Un-aided hindi linguistic minory
+                                                Institute."
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-inverted">
+                                    <div class="timeline-badge warning"><i class="fa fa-credit-card"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">TCET Vision</h4>
+                                            <hr>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>"Thakur College of Engineering and Technology will excel in Technical Education to become an internationally renowned premier Institute of Engineering and Technology"</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-badge danger"><i class="fa fa-bomb"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">TCET Mission</h4>
+                                            <hr>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>"To provide state-of-the-art infrastructure and right academic ambience for developing professional skills as well as an environment for growth of leadership and managerial skills to students which will make them competent engineers to deliver quality results in industry"</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-8 -->
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bell fa-fw"></i> About Traning & Placeent ( T&P )
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <p>
+                                "In the present scenario of globalization there is tremendous demand 
+                                for skilled manpower particularly in the area of Engineering and Technology.
+                                Therefore, Training and Placement (T&P) was set up with a view to provide 
+                                necessary impetus to launch our students into the real world where cut-throat
+                                competition is the order of the day. It plays a vital role in finding suitable
+                                job opportunities for students and at same time tying up with industries and
+                                professional organizations for fruitful and mutually beneficial linkages."
+                            </p>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <%- include('includes/scripts.ejs') %>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('includes/head.ejs') %>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<%- include('includes/navigation.ejs') %>
+
+        <%- include('includes/student-sidebar.ejs') %>
+        
+        <div  id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">On Going Drives</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            
+            <% if (drives.length > 0) { %>
+                <div class="row">
+                    <% for (let drive of drives) { %>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="panel panel-green">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class=" text-center">
+                                            <div class="huge"><%= drive.name %></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/student-viewDrive/<%= drive.id %>">
+                                    <div class="panel-footer">
+                                        <span class="pull-left">View Details</span>
+                                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            <% } else { %>
+                <h1>No Drives Found!</h1>
+            <% } %>
+
+            <div class="row"></div>
+        </div>
+
+        <%- include('includes/scripts.ejs') %>
+
+    </body>
+    
+</html>
+
+
+
+
+
