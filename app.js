@@ -11,7 +11,7 @@ const flash = require("connect-flash");
 const Student = require('./models/student');
 const Admin = require('./models/admin');
 
-const MONGODB_URI = 'mongodb+srv://abc:abc@cluster0.pylwp.mongodb.net/be';
+const MONGODB_URI = 'mongodb+srv://pijush:12%40pIJUSH@cluster0.pylwp.mongodb.net/be';
 const app = express();
 const store = new mongoDBStore({
     uri: MONGODB_URI,
